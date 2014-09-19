@@ -15,7 +15,7 @@
 	</div>
 	<div class="row love-woof">
 		<div class="large-12 columns">
-			<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <?php _e('Made with Love in','woof'); ?> <a href="http://themefortress.com/woof/" rel="nofollow" title="woof Framework">woof</a>.</p>
+			<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>, <a href="http://www.dauid.us" rel="nofollow" title="woof Framework">Dave Winter</a>.</p>
 		</div>
 	</div>
 </footer>

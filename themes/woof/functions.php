@@ -85,7 +85,7 @@ add_action('after_setup_theme', 'woof_theme_support'); /* end woof theme support
 if (is_user_logged_in()) { add_action('wp_footer', 'show_template'); }
   function show_template() {
       global $template;
-      print_r($template);
+      print_r('<p style="text-align:center; font-size:10px;">'.$template.'</p>');
   }
 
 /* ::: TWEAK SOME WORDPRESS DEFAULTS ::::::::::::::::::::::::::::::::: */
