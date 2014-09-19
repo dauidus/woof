@@ -1,0 +1,39 @@
+/*!
+Theme Name: html5 shell by mimoYmima.com
+Theme URI: http://html5.mimoymima.com/
+Description: a Framework for rapidly developing HTML5 based WordPress Themes
+Version: 2.55
+Author: Brent Lagerman
+Author URI: http://html5.mimoymima.com/
+*/
+
+
+// bourbon.io mixin library
+@import "./styles/bourbon/bourbon";
+
+// Set Some Neat Variables
+// $visual-grid: true;
+
+// bourbon neat grid system
+@import "./styles/neat/neat";
+
+// mixins
+@import "./styles/_mixins.scss";
+
+// colors used through the site
+@import "./styles/_colors.scss";
+
+// reset + general styles
+@import "./styles/_base.scss";
+
+// typography
+@import "./styles/_type.scss";
+
+// forms
+@import "./styles/_forms.scss";
+
+// site specific styles
+@import "./styles/_site.scss";
+
+// page specific styles
+@import "./styles/_pages.scss";

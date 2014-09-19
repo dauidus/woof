@@ -1,0 +1,37 @@
+/**
+
+* GWFC.CSS
+* -----------------------------------------------------------------------------
+* Initializes & sets up Google Web Fonts Customizer (GWFC) Stylesheet 
+* =============================================================================
+
+*/
+
+#accordion-section-gwfc_customizer_section_fonts .accordion-section-title:after {
+	top: 11px !important;
+}
+
+#accordion-section-gwfc_customizer_section_fonts .accordion-section-content {
+	padding: 0;
+}
+
+#accordion-section-gwfc_customizer_section_fonts .customize-control-sub-title {
+    background: none repeat scroll 0 0 #f5f5f5;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc !important;
+    border-top: 1px solid #ccc !important;
+}
+
+#accordion-section-gwfc_customizer_section_fonts .accordion-section-content li {
+	padding: 10px 20px 15px !important;
+	margin-bottom: 0px !important;
+	border-bottom: 1px solid #efefef;
+}
+
+#accordion-section-gwfc_customizer_section_fonts .customize-control-sub-title h4 {
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0px;
+}

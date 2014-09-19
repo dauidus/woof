@@ -1,0 +1,759 @@
+/**
+ * CSS for the Menu Customizer.
+ *
+ * Many styles are re-used from the existing Menu screen; these rules make
+ * a few adaptations so that things fit better in the Customizer.
+ */
+
+#accordion-section-nav .accordion-section-title:before {
+	font: normal 20px/1 dashicons;
+	content: "\f116";
+	position: absolute;
+	top: 11px;
+	left: 12px;
+}
+
+#accordion-section-nav .accordion-section-title {
+	padding-left: 43px;
+}
+
+.wp-customizer .menu-item-bar .menu-item-handle,
+.wp-customizer .menu-item-settings,
+.wp-customizer .menu-item-settings .description-thin {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+
+.wp-customizer .menu-item-bar {
+    margin: 0;
+}
+
+.wp-customizer .menu-item-bar .menu-item-handle {
+	max-width: 100%;
+}
+
+.wp-customizer .menu-item-handle .item-title {
+	margin-right: 0;
+}
+
+.wp-customizer .menu-item-handle .item-type {
+	padding: 1px 8px 0 5px;
+	float: right;
+	text-align: right;
+}
+
+/* Preferable for this to not break. But @todo: check functionality in translations. */
+.is-submenu {
+	white-space: normal;
+	display: inline-block;
+}
+
+.menu-item-depth-0 .is-submenu {
+	display: none;
+}
+
+.wp-customizer .menu-item-settings {
+	max-width: 100%;
+	overflow: hidden;
+	padding: 10px;
+	background: #fff;
+}
+
+.wp-customizer .menu-item-settings .description-thin {
+	width: 100%;
+	height: auto;
+	margin: 0 0 12px 0;
+}
+
+.wp-customizer .menu-item-settings input[type="text"] {
+	width: 100%;
+}
+
+.wp-customizer .menu-item-settings .submitbox {
+	margin: 0;
+	padding: 0;
+}
+
+.wp-customizer .menu-item .submitbox .submitdelete {
+	padding: 2px 0;
+}
+
+.wp-customizer .menu-item .item-delete:before {
+	content: "\f158";
+	font: normal 20px/1 dashicons;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	top: 5px;
+	right: 1px;
+}
+
+.wp-customizer .menu-item-settings .link-to-original {
+	padding: 5px 0;
+	border: none;
+	font-style: normal;
+	margin: 0;
+}
+
+.wp-customizer .menu-item-settings .link-to-original a {
+	position: relative;
+}
+
+.wp-customizer .menu-item-settings .link-to-original a:after {
+	content: "\f504";
+	font: normal 20px/1 dashicons;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none !important;
+	position: relative;
+	top: 4px;
+	left: 2px;
+	display: inline-block;
+}
+
+/* Menu-item reordering nav. */
+.menu-item-reorder-nav {
+	display: none;
+	background-color: #fafafa;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.menu-item-reorder-nav span {
+	position: relative;
+	overflow: hidden;
+	float: left;
+	display: block;
+	width: 30px;
+	height: 40px;
+	color: #888;
+	text-indent: -9999px;
+	cursor: pointer;
+	outline: none;
+}
+
+.menu-item-reorder-nav span:before {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	font: normal 20px/40px dashicons;
+	text-align: center;
+	text-indent: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.menu-item-reorder-nav span:hover,
+.menu-item-reorder-nav span:focus {
+	color: #444;
+	background: #eee;
+}
+
+.menus-move-down:before {
+	content: '\f346';
+}
+
+.menus-move-up:before {
+	content: '\f342';
+}
+
+.menus-move-left:before {
+	content: '\f221';
+}
+
+.menus-move-right:before {
+	content: '\f222';
+}
+
+/* @todo: these also need a lot of logic for disabling in JS, or very clever CSS */
+.first-item .menus-move-up,
+.first-item .menus-move-right,
+.last-item .menus-move-down,
+.menu-item-depth-0 .menus-move-left,
+.menu-item-depth-10 .menus-move-right {
+	color: #d5d5d5 !important;
+	background-color: #fafafa !important;
+	cursor: default;
+}
+
+.menu-item-reorder-nav:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -10px;
+	width: 10px;
+	height: 40px;
+	background: -webkit-linear-gradient(left, rgba(250,250,250,0) 0%,rgba(250,250,250,1) 100%);
+	background: -moz-linear-gradient(left, rgba(250,250,250,0) 0%, rgba(250,250,250,1) 100%);
+	background: -ms-linear-gradient(left, rgba(250,250,250,0) 0%,rgba(250,250,250,1) 100%);
+	background: linear-gradient(to right, rgba(250,250,250,0) 0%,rgba(250,250,250,1) 100%);
+}
+
+.reordering .menu-item .item-controls,
+.reordering .menu-item .item-type,
+.reordering .menu-item .is-submenu {
+	display: none;
+}
+
+.reordering .menu-item-reorder-nav {
+    display: block;
+}
+
+/* Targets the menu name inputs. */
+.wp-customizer li[id*="nav_menu"].control-section li[id*="nav_menu"].customize-control:first-child .customize-control-title {
+	display: none;
+}
+
+.customize-control input.menu-name-field {
+	width: 100%; /* Override the 98% default for customizer inputs, to align with the size of menu items. */
+	margin-bottom: 8px; /* Override collapsing at smaller viewports. */
+}
+
+/* Duplicating styles on `.nav-menus-php .item-edit {}` in nav-menus.css:593. */
+.wp-customizer .menu-item .item-edit {
+	position: absolute;
+	right: -20px;
+	top: 0;
+	display: block;
+	width: 30px;
+	height: 40px;
+	margin-right: 0 !important;
+	text-indent: 100%;
+	outline: none;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* Duplicates `.nav-menus-php .item-edit:before {}` in common.css:2220. */
+.wp-customizer .menu-item .item-edit:before {
+	right: 0;
+	content: '\f140';
+	border: none;
+	background: none;
+	font: normal 20px/1 dashicons;
+	speak: none;
+	display: block;
+	padding: 0;
+	text-indent: 0;
+	text-align: center;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none !important;
+}
+
+/* Duplicates `.nav-menus-php .item-edit:before {}` in common.css:2260. */
+.wp-customizer .menu-item .item-edit:before {
+	line-height: 2.1;
+}
+
+/* Duplicates `.nav-menus-php .menu-item-edit-active .item-edit:before {}` in common.css:2271. */
+.wp-customizer .menu-item .menu-item-edit-active .item-edit:before {
+	content: '\f142';
+}
+
+.wp-customizer .menu-settings dl {
+	margin: 12px 0 0 0;
+	padding: 0;
+}
+
+.wp-customizer .menu-settings .checkbox-input {
+	margin-top: 8px;
+}
+
+.wp-customizer .menu-settings .menu-theme-locations {
+	border-top: 1px solid #ccc;
+}
+
+.wp-customizer .menu-settings {
+	margin-top: 36px;
+	border-top: none;
+}
+
+.menu-settings .customize-control-checkbox label {
+	line-height: 1;
+}
+
+.menu-settings .customize-control.customize-control-checkbox {
+	margin-bottom: 8px; /* Override collapsing at smaller viewports. */
+}
+
+.customize-control-menu {
+	margin-top: 4px;
+}
+
+/* Updating Indicator */
+.nav-menu-item-wrap.saving .menu-item-handle .spinner {
+	display: inline;
+	margin-top: -1px;
+}
+
+/* Screen Options */
+#customizer-menu-screen-options-button {
+    position: absolute;
+	top: 36px;
+	right: 56px;
+	color: #555;
+}
+
+#customizer-menu-screen-options-button:hover,
+#customizer-menu-screen-options-button:active,
+#customizer-menu-screen-options-button:focus {
+	color: #0074a2;
+	outline: none;
+}
+
+#customizer-menu-screen-options-button.active {
+	color: #0074a2;
+}
+
+#customizer-menu-screen-options-button:after {
+    position: absolute;
+	top: 0;
+	left: 0;
+	font: normal 20px/1 'dashicons';
+    content: "\f180";
+	display: block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#screen-options-wrap {
+	display: none;
+}
+
+#accordion-section-nav {
+	position: relative;
+}
+
+#screen-options-wrap.active {
+	display: block;
+	position: absolute;
+	top: 69px;
+	right: 8px;
+	z-index: 12;
+	width: 168px;
+	background: #333;
+	color: #eee;
+	border: none;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.025);
+	box-shadow: 0 1px 0 rgba(0,0,0,.025);
+}
+
+#customizer-menu-screen-options-button.active:before {
+	font: normal 30px/1 'dashicons';
+	content: "\f142";
+	display: block;
+	position: absolute;
+	top: 14px;
+	left: -6px;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wp-customizer .metabox-prefs label {
+	display: block;
+	padding-right: 0;
+	line-height: 30px;
+}
+
+/* Not exactly sure what broke this, or why it works without these styles in core. */
+.wp-customizer .wp-full-overlay a.collapse-sidebar {
+	position: fixed;
+	left: 0;
+}
+
+/* Submenu depths. 30px even on nav-menus.php; need to reduce here for space. */
+/* WARNING: The factors will be hardcoded into the javascript, currently even. @todo varying depth factors in JS. */
+.menu-item-depth-0 { margin-left: 0px; }
+.menu-item-depth-1 { margin-left: 24px; }
+.menu-item-depth-2 { margin-left: 42px; }
+.menu-item-depth-3 { margin-left: 54px; }
+.menu-item-depth-4 { margin-left: 66px; }
+.menu-item-depth-5 { margin-left: 78px; }
+.menu-item-depth-6 { margin-left: 90px; }
+.menu-item-depth-7 { margin-left: 98px; }
+.menu-item-depth-8 { margin-left: 106px; }
+.menu-item-depth-9 { margin-left: 112px; }
+.menu-item-depth-10 { margin-left: 120px; }
+.menu-item-depth-11 { margin-left: 128px; }
+
+.menu-item-depth-0 .menu-item-transport { margin-left: 0px; }
+.menu-item-depth-1 .menu-item-transport { margin-left: -12px; }
+.menu-item-depth-2 .menu-item-transport { margin-left: -24px; }
+.menu-item-depth-3 .menu-item-transport { margin-left: -36px; }
+.menu-item-depth-4 .menu-item-transport { margin-left: -48px; }
+.menu-item-depth-5 .menu-item-transport { margin-left: -150px; }
+.menu-item-depth-6 .menu-item-transport { margin-left: -180px; }
+.menu-item-depth-7 .menu-item-transport { margin-left: -210px; }
+.menu-item-depth-8 .menu-item-transport { margin-left: -240px; }
+.menu-item-depth-9 .menu-item-transport { margin-left: -270px; }
+.menu-item-depth-10 .menu-item-transport { margin-left: -300px; }
+.menu-item-depth-11 .menu-item-transport { margin-left: -330px; }
+
+/*
+ * Add-menu-items mode.
+ */
+.wp-full-overlay-main {
+	right: auto; /* This overrides a right: 0; which causes the preview to resize rather than slide off screen at the normal size. */
+	width: 100%;
+}
+
+.adding-menu-items .control-section {
+	opacity: .4;
+}
+
+.adding-menu-items .control-panel.control-section,
+.adding-menu-items .control-section.open {
+	opacity: 1;
+}
+
+/* Add-new button. */
+#customize-theme-controls .add-new-menu-item {
+	cursor: pointer;
+	float: right;
+	margin-left: 10px;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: none;
+}
+
+.add-new-menu-item:before {
+	content: "\f132";
+	display: inline-block;
+	position: relative;
+	left: -2px;
+	top: -1px;
+	font: normal 20px/1 'dashicons';
+	vertical-align: middle;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.adding-menu-items .add-new-menu-item,
+.adding-menu-items .add-new-menu-item:hover {
+	background: #eee;
+	border-color: #999;
+	color: #333;
+	-webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+}
+
+.adding-menu-items .add-new-menu-item:before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* Existing menu item bar, with item delete button. */
+.adding-menu-items .menu-item .item-delete {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 0;
+	color: #a00;
+}
+
+.adding-menu-items .menu-item .item-delete:hover,
+.adding-menu-items .menu-item .item-delete:focus {
+	color: #f00;
+}
+
+.adding-menu-items .menu-item .item-delete:before {
+	content: "\f335";
+	font-size: 30px;
+	top: 6px;
+	right: 4px;
+}
+
+.adding-menu-items .menu-item-handle .is-submenu,
+.adding-menu-items .menu-item-handle .item-edit {
+	display: none;
+}
+
+.adding-menu-items .menu-item-handle .item-type {
+	padding-right: 24px;
+}
+
+#available-menu-items .item {
+	position: static;
+}
+
+#available-menu-items {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	bottom: 0;
+	left: -301px;
+	width: 300px;
+	margin: 0;
+	z-index: 4;
+	background: #f7f7f7;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	border-right: 1px solid #dddddd;
+}
+
+#available-menu-items .accordion-section-title {
+	border-left: none;
+	border-right: none;
+}
+
+#available-menu-items .open .accordion-section-title {
+	background: #fff;
+}
+
+#available-menu-items .accordion-section-content {
+	overflow-y: auto;
+	max-height: 200px; /* This gets set in JS to fit the screen size, and based on # of sections. */
+}
+
+#available-menu-items-search .accordion-section-title {
+	padding: 12px 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#available-menu-items-search .accordion-section-title:after {
+	display: none;
+}
+
+#available-menu-items .accordion-section-content {
+	border-top: 1px solid #eee;
+	padding: 15px;
+}
+
+#available-menu-items-search input {
+	padding: 6px 10px;
+	width: 100%;
+}
+
+#available-menu-items-search .accordion-section-content {
+	padding: 15px;
+}
+
+#available-menu-items .item-tpl {
+	position: relative;
+	padding: 20px 15px 20px 60px;
+	border-bottom: 1px solid #e4e4e4;
+	cursor: pointer;
+	display: none;
+}
+
+#available-menu-items .item-tpl:hover,
+#available-menu-items .item-tpl.selected {
+	background: #eee;
+}
+
+#available-menu-items .menu-item-handle .item-type {
+    padding-right: 0;
+}
+
+#available-menu-items .menu-item-handle .item-title {
+    padding-left: 20px;
+}
+
+#available-menu-items .menu-item-handle {
+    cursor: pointer;
+}
+
+#available-menu-items .item-top,
+#available-menu-items .item-top:hover {
+	border: none;
+	background: transparent;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#available-menu-items .menu-item-handle {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	margin-top: -1px;
+}
+
+#available-menu-items .item-title h4 {
+	padding: 0 0 5px;
+	font-size: 14px;
+}
+
+#available-menu-items a.item-add {
+	font-size: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #555;
+}
+
+#available-menu-items .menu-item-handle:focus a.item-add,
+#available-menu-items .menu-item-handle:hover a.item-add {
+	color: #222;
+}
+
+#available-menu-items .item-add:before {
+	content: "\f132";
+	font: normal 20px/1 dashicons;
+	position: absolute;
+	left: 6px;
+	top: 12px;
+}
+
+#customize-preview {
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+body.adding-menu-items #available-menu-items {
+	left: 0;
+}
+
+body.adding-menu-items .wp-full-overlay-main {
+	left: 300px;
+}
+
+body.adding-menu-items #customize-preview {
+	opacity: 0.4;
+}
+
+.nav-menu-inserted-item-loading .spinner {
+	float: left;
+	margin: 0 8px 0 0;
+}
+
+.nav-menu-inserted-item-loading .menu-item-handle .item-type {
+	padding: 0 0 0 8px;
+}
+
+
+.nav-menu-inserted-item-loading .menu-item-handle,
+.added-menu-item .menu-item-handle.loading {
+	padding: 10px 15px 10px 8px;
+	cursor: default;
+	opacity: .5;
+	background: #fff;
+	color: #777;
+}
+
+.added-menu-item .menu-item-handle {
+	transition-property: opacity, background, color;
+	transition-duration: 1.25s;
+	transition-timing-function: cubic-bezier( .25, -2.5, .75, 8 ); /* Replacement for .hide().fadeIn('slow') in JS to add emphasis when it's loaded. */
+}
+
+/* Add/delete Menus */
+#accordion-section-add_menu .accordion-section-title {
+	padding-left: 45px;
+}
+
+#accordion-section-add_menu .accordion-section-title:before {
+	font: normal 20px/1 dashicons;
+	position: absolute;
+	top: 11px;
+	left: 14px;
+	content: "\f132";
+}
+
+#create-new-menu-submit {
+	float: right;
+	margin: 0 0 12px 0;
+}
+
+#toggle-menu-delete {
+	float: right;
+}
+
+.menu-delete {
+	display: none;
+}
+
+.menu-delete:before {
+	font: normal 20px/1 dashicons;
+	content: "\f158";
+	position: absolute;
+	top: 11px;
+	right: 9px;
+	color: #a00;
+}
+
+.menu-delete:focus:before,
+.menu-delete:hover:before {
+	color: #f00;
+}
+
+.deleting-menus .menu-delete {
+	display: block;
+}
+
+.deleting-menus .accordion-section-title:after {
+	display: none;
+}
+
+/* Displayed while the menu-deletion ajax is processing. */
+#customize-theme-controls .accordion-section.deleting .accordion-section-title {
+	background: #a00;
+	color: #fff;
+}
+
+#customize-theme-controls .deleting-menus .accordion-section-title {
+	transition: .18s background ease-in-out;
+}
+
+#customize-theme-controls .accordion-section.deleting .menu-delete {
+	display: none;
+}
+
+.deleting-menus #toggle-menu-delete {
+	background: #eee;
+	border-color: #999;
+	color: #333;
+	-webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+}
+
+.deleting-menus #toggle-menu-delete:before {
+	content: "\f132";
+	display: inline-block;
+	position: relative;
+	left: -2px;
+	top: -1px;
+	font: normal 20px/1 'dashicons';
+	vertical-align: middle;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* Media queries */
+@media screen and (max-height: 700px) and (min-width: 981px) {
+	.menu-item-handle {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		margin-top: -1px;
+	}
+	.menu-item-handle:hover {
+		position: relative;
+		z-index: 1;
+	}
+	.customize-control-nav_menu {
+		margin-top: 12px;
+	}
+	.customize-control input.menu-name-field {
+		margin-bottom: 12px;
+	}
+}

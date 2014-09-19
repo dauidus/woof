@@ -1,0 +1,20 @@
+// Start the footer
+footer.full-width {
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+	padding-top: rem-calc(48);
+	p {
+		font-size: rem-calc(14);
+	}
+	a {
+		color: #666;
+		font-size: rem-calc(15);
+		&:hover, &:focus {
+			color: $body-font-color;
+		}
+	}
+	.love-woof {
+		border-top: 1px solid #ccc;
+		padding-top: rem-calc(24);
+	}
+}
