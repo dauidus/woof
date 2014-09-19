@@ -101,19 +101,19 @@
 	
 	
 	
+	
+	// Link color
+	wp.customize( 'woof_link_norm_color', function( value ) {
+        value.bind( function( to ) {
+            $( '.container a' ).css( 'color', to );
+        } );
+    });
 	// Link Hover color
 	wp.customize( 'woof_link_hover_color', function( value ) {
         value.bind( function( to ) {
             $( '.container a:hover' ).css( 'color', to );
         } );
     });
-	// Link color
-	wp.customize( 'woof_link_color', function( value ) {
-        value.bind( function( to ) {
-            $( '.container a' ).css( 'color', to );
-        } );
-    });
-	
 	
 	
 	

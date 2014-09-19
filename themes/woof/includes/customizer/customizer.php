@@ -227,16 +227,16 @@ function woof_customize_register( $wp_customize ) {
 		    )
 		);
 			// Theme link color
-			$wp_customize->add_setting( 'woof_link_color' , array(
+			$wp_customize->add_setting( 'woof_link_norm_color' , array(
 			    'default'     => '#dd3333',
 			    'transport'   => 'postMessage',
 			) );
 				$wp_customize->add_control(
 				    new WP_Customize_Color_Control(
-				        $wp_customize, 'woof_link_color', array(
+				        $wp_customize, 'woof_link_norm_color', array(
 				            'label'      => 'Link Color',
 				            'section'    => 'woof_colors_body_section',
-				            'settings'   => 'woof_link_color',
+				            'settings'   => 'woof_link_norm_color',
 				            'priority'   => 1,
 				        )
 				    )
@@ -244,7 +244,7 @@ function woof_customize_register( $wp_customize ) {
 			// Theme link hover color
 			$wp_customize->add_setting( 'woof_link_hover_color' , array(
 			    'default'     => '#57A3E8',
-			    'transport'   => 'postMessage',
+			    'transport'   => 'refresh',
 			) );
 				$wp_customize->add_control(
 				    new WP_Customize_Color_Control( 
@@ -264,8 +264,8 @@ function woof_customizer_head() { ?>
 
    	<style type="text/css">
 
-		<?php if( get_theme_mod( 'woof_link_color' )) { ?>
-			.container a { color: <?php echo get_theme_mod( 'woof_link_color' ); ?>; }
+		<?php if( get_theme_mod( 'woof_link_norm_color' )) { ?>
+			.container a { color: <?php echo get_theme_mod( 'woof_link_norm_color' ); ?>; }
 		<?php } ?>
 
 		<?php if(get_theme_mod( 'woof_link_hover_color' )) { ?>
