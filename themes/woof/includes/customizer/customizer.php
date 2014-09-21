@@ -63,7 +63,7 @@ function woof_customize_register( $wp_customize ) {
 			// Circle logo
 			$wp_customize->add_setting( 'woof_logo_circle', array(
 		        'default'    =>  false,
-		        'transport'  =>  'postMessage'
+		        'transport'  =>  'refresh'
 		    ) );
 				$wp_customize->add_control( 'woof_logo_circle', array(
 			    	'priority'	=> 3,
@@ -74,7 +74,7 @@ function woof_customize_register( $wp_customize ) {
 			// Frame logo
 			$wp_customize->add_setting( 'woof_logo_frame', array(
 		        'default'    =>  false,
-		        'transport'  =>  'postMessage'
+		        'transport'  =>  'refresh'
 		    ) );
 				$wp_customize->add_control( 'woof_logo_frame', array(
 			    	'priority'	=> 4,
