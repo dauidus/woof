@@ -190,7 +190,7 @@ function woof_customize_register( $wp_customize ) {
 			// social icon color
 			$wp_customize->add_setting( 'woof_icon_color' , array(
 			    'default'     => '#303538',
-			    'transport'   => 'postMessage'
+			    'transport'   => 'refresh'
 			) );
 				$wp_customize->add_control(
 				    new WP_Customize_Color_Control(
@@ -205,7 +205,7 @@ function woof_customize_register( $wp_customize ) {
 			// social icon hover color
 			$wp_customize->add_setting( 'woof_icon_hover_color' , array(
 			    'default'     => '#303538',
-			    'transport'   => 'postMessage'
+			    'transport'   => 'refresh'
 			) );
 				$wp_customize->add_control(
 				    new WP_Customize_Color_Control(

@@ -64,6 +64,22 @@
 	            ) ),
 	        ) );
 	    ?>
+	    
+	    <?php    	
+    	// social_icons list
+		require get_template_directory() . '/includes/customizer/social-icons/social-icons-list.php';
+		
+		foreach ($social_icons as $key => $value) {
+				
+			if ( false != get_theme_mod( 'woof_social_' . $key)) { ?>
+                <a class="woof_social icon icon-<?php echo $key ?>" href="<?php echo esc_url( get_theme_mod( 'woof_social_' . $key) ); ?>" title="<?php echo $value ?>" target="_blank">
+                    <span class="hidden"><?php _e( $value, 'woof' ); ?></span>
+                </a>
+			<?php 
+			}
+			
+		} ?>
+	    
 	    <?php
 	    	// Uncomment the following to enable the right menu (additional menu)
 			
