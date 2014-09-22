@@ -127,6 +127,22 @@ time {
 	}
 }
 
+
+
+
+
+.blog-logo img {
+  display: block;
+  max-height: 120px;
+  width: auto;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+
+
+
+
 // define content padding for later use
 $content-padding: rem-calc(50);
 

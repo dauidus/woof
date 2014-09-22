@@ -2286,6 +2286,14 @@ time a:focus {
   color: #444;
 }
 
+.blog-logo img {
+  display: block;
+  max-height: 120px;
+  width: auto;
+  margin: 0 auto;
+  line-height: 0;
+}
+
 .entry-author {
   background-color: #fbfbfb;
   border: none;
