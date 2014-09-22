@@ -2358,6 +2358,26 @@ ul.pagination li {
   content: "";
 }
 
+.top-bar-section {
+  height: auto;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.top-bar .name h1 a {
+  float: left;
+}
+
+.blog-logo img {
+  position: relative;
+  max-height: 45px;
+  width: auto;
+  margin: 0 auto;
+  line-height: 0;
+}
+
 /* Start to customize Reverie */
 .hidden {
   text-indent: -9999px;
@@ -2465,14 +2485,6 @@ span.author a:hover, span.author a:focus,
 time a:hover,
 time a:focus {
   color: #444;
-}
-
-.blog-logo img {
-  display: block;
-  max-height: 120px;
-  width: auto;
-  margin: 0 auto;
-  line-height: 0;
 }
 
 .entry-author {

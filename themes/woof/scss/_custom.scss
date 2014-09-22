@@ -1,0 +1,16 @@
+.top-bar-section {
+  height: auto;
+  @include transition-duration(1s);
+}
+
+.top-bar .name h1 a {
+	float: left;
+}
+
+.blog-logo img {
+  position: relative;
+  max-height: 45px;
+  width: auto;
+  margin: 0 auto;
+  line-height: 0;
+}

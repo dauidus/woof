@@ -12,6 +12,7 @@
 // Tweak the mixin for WordPress, this might create some extra CSS in additional to app.css
 @import "foundation/components/pagination";
 
+
 // Reverie comes with a standalone Foundation stylesheet already
 // @import "foundation";
 
@@ -21,6 +22,9 @@
  @import "compass/css3/transition";
 
 @import "../fonts/scss/font-awesome.scss";
+
+// custom zurb
+@import "custom";
 
 /* Start to customize Reverie */
 
@@ -126,22 +130,6 @@ time {
 		}
 	}
 }
-
-
-
-
-
-.blog-logo img {
-  display: block;
-  max-height: 120px;
-  width: auto;
-  margin: 0 auto;
-  line-height: 0;
-}
-
-
-
-
 
 // define content padding for later use
 $content-padding: rem-calc(50);
