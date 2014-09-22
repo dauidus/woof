@@ -224,115 +224,15 @@ $content-padding: rem-calc(50);
 	float: left;
 }
 
-// add some basic comment styles
-ol.commentlist {
-	margin-left: 0;
-	margin-top: 2em;
-	p {
-		font-size: rem-calc(15);
-		line-height: 1.5;
-	}
-	ul.children {
-		margin-left: rem-calc(64);
-	}
-	li {
-		list-style: none;
-		margin-bottom: 2em;
-	
-		.comment-author img {
-			float: left;
-			margin: 0 1em 0 0;
-		}
-		.author-meta {
-			display: inline-block;
-			cite.fn {
-				font-style: normal;
-				font-weight: 600;
-				margin-right: rem-calc(8);
-			}
-			time a {
-				color: #ccc;
-				font-size: rem-calc(14);
-				margin-right: rem-calc(8);
-			}
-			.comment-edit-link {
-				color: #bbb;
-				font-size: rem-calc(14);
-			}
-		}
-		section.comment {
-			margin-left: rem-calc(64);
-			margin-bottom: rem-calc(32);
-			a.comment-reply-link {
-				font-size: rem-calc(14);
-				font-weight: 600;
-				color: #bbb;
-				&:hover, &:focus {
-					color: $body-font-color;
-				}
-			}
-		}
-	}
-}
 
 
+@import "comments";
 
-// Start the sidebar
-#sidebar {
-	margin-top: rem-calc(20);
-}
+@import "sidebar";
 
-#sidebar, .footer-widget {
-	.panel {
-		border: none;
-		background-color: #eee;
-		padding: rem-calc(24) rem-calc(30);
-		a {
-			color: #999;
-			font-size: rem-calc(15);
-			&:hover, &:focus {
-				color: $body-font-color;
-			}
-		}
-	}
-	ul {
-		list-style-type: none;
-		margin-left: 0;
-	}
-	.widget {
-		h4 {
-			text-transform: uppercase;
-			font-size: rem-calc(16);
-			padding-bottom: rem-calc(16);
-			border-bottom: 1px solid #ddd;
-			color: #888;
-			font-weight: 600;
-		}
-	}
-}
+@import "footer";
 
 
-
-// Start the footer
-footer.full-width {
-	background-color: #fff;
-	border-top: 1px solid #ccc;
-	padding-top: rem-calc(48);
-	p {
-		font-size: rem-calc(14);
-	}
-	a {
-		color: #666;
-		font-size: rem-calc(15);
-		&:hover, &:focus {
-			color: $body-font-color;
-		}
-	}
-	.love-reverie {
-		border-top: 1px solid #ccc;
-		padding-top: rem-calc(24);
-	}
-}
 
 // Fix admin bar issue, by bybe on Github
 .admin-bar > .fixed {

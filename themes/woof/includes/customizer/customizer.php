@@ -10,6 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
+
 function woof_customize_register( $wp_customize ) {
 	
 	/**
@@ -33,7 +34,12 @@ function woof_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'refresh';
 	
+	// image library tab
+	require_once get_template_directory() . '/includes/customizer/extras/customizer-image-library/cil.php';
+
+
 	
+		/* moved to /includes/customizer/extras/customizer-image-library/cil.php
 		// Logo Controls
 		$wp_customize->add_section( 'woof_logo_section' , array(
 		    'title'       => 'Logo',
@@ -45,14 +51,16 @@ function woof_customize_register( $wp_customize ) {
 			    'transport'   => 'refresh'
 			) );
 				$wp_customize->add_control( 
-					new WP_Customize_Image_Control( 
+					new My_Customize_Image_Media_Library_Control( 
 						$wp_customize, 'woof_logo', array(
 						    'label'    => 'Logo',
 						    'section'  => 'woof_logo_section',
 						    'settings' => 'woof_logo',
+						    //'context'  => 'my-custom-logo'
 						) 
 					) 
 				);
+		*/
 		
 		// header options
 		$wp_customize->add_section( 'woof_custom', array(
@@ -258,6 +266,7 @@ function woof_customize_register( $wp_customize ) {
 				);
 	
 }
+
 add_action( 'customize_register', 'woof_customize_register' );
 
 function woof_customizer_head() { ?>

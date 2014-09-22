@@ -3947,6 +3947,119 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/includes\/customizer\/extras\/customizer-image-library\/cil.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/customizer-image-library\/cil.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/customizer\/extras\/customizer-image-library\/js\/min\/wpq-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/customizer-image-library\/js\/min\/wpq-min.js",
+		"outputAbbreviatedPath": "\/includes\/customizer\/extras\/customizer-image-library\/js\/min\/min\/wpq-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/includes\/customizer\/extras\/customizer-image-library\/js\/wpq.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/customizer-image-library\/js\/wpq.js",
+		"outputAbbreviatedPath": "\/includes\/customizer\/extras\/customizer-image-library\/js\/min\/wpq-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/includes\/customizer\/extras\/image-library-upload\/css\/image-picker.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/css\/image-picker.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/customizer\/extras\/image-library-upload\/css\/macFFBgHack.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 94,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/css\/macFFBgHack.png",
+		"outputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/css\/macFFBgHack.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/includes\/customizer\/extras\/image-library-upload\/css\/tb-close-2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 412,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/css\/tb-close-2x.png",
+		"outputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/css\/tb-close-2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/includes\/customizer\/extras\/image-library-upload\/css\/tb-close.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 387,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/css\/tb-close.png",
+		"outputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/css\/tb-close.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/includes\/customizer\/extras\/image-library-upload\/css\/thickbox.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/css\/thickbox.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/customizer\/extras\/image-library-upload\/ilu.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/ilu.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/customizer\/extras\/image-library-upload\/js\/ff-image-picker.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/js\/ff-image-picker.js",
+		"outputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/js\/min\/ff-image-picker-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/includes\/customizer\/extras\/image-library-upload\/js\/image-picker.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/js\/image-picker.min.js",
+		"outputAbbreviatedPath": "\/includes\/customizer\/extras\/image-library-upload\/js\/min\/image-picker.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/includes\/customizer\/google-fonts\/controls.php": {
 		"fileType": 8192,
 		"ignore": 0,
