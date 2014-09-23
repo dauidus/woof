@@ -19,7 +19,7 @@ function gwfc_customizer_live_preview() {
 
 	wp_enqueue_script( 
 		'gwfc-customizer-js',
-		get_template_directory() . '/inc/customizer/google-fonts/gwfc-live.js',
+		get_template_directory_uri() . '/inc/customizer/google-fonts/gwfc-live.js',
 		array( 'jquery','customize-preview' ),
 		'',	
 		true

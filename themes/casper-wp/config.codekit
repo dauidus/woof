@@ -814,6 +814,37 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/inc\/customizer\/extras\/customizer-image-library\/cil.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/inc\/customizer\/extras\/customizer-image-library\/cil.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/inc\/customizer\/extras\/customizer-image-library\/js\/min\/wpq-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/inc\/customizer\/extras\/customizer-image-library\/js\/min\/wpq-min.js",
+		"outputAbbreviatedPath": "\/inc\/customizer\/extras\/customizer-image-library\/js\/min\/min\/wpq-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/inc\/customizer\/extras\/customizer-image-library\/js\/wpq.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/inc\/customizer\/extras\/customizer-image-library\/js\/wpq.js",
+		"outputAbbreviatedPath": "\/inc\/customizer\/extras\/customizer-image-library\/js\/min\/wpq-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/inc\/customizer\/google-fonts\/controls.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -828,15 +859,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/inc\/customizer\/google-fonts\/font-type-list.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/inc\/customizer\/google-fonts\/gwfc-js.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/customizer\/google-fonts\/gwfc-js.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -861,6 +883,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/inc\/customizer\/google-fonts\/gwfc.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/inc\/customizer\/google-fonts\/gwfc.js",
+		"outputAbbreviatedPath": "\/inc\/customizer\/google-fonts\/min\/gwfc-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/inc\/customizer\/google-fonts\/gwfc.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -869,6 +902,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/inc\/customizer\/google-fonts\/min\/gwfc-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/inc\/customizer\/google-fonts\/min\/gwfc-min.js",
+		"outputAbbreviatedPath": "\/inc\/customizer\/google-fonts\/min\/min\/gwfc-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/inc\/customizer\/google-fonts\/output.php": {
 		"fileType": 8192,

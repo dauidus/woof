@@ -29,20 +29,7 @@ License: GPL
 * 	04. Enqueue Google Font CSS into head
 * =============================================================================
 
-*/
-
-	
-//	01. Setup Menu
-// =============================================================================
-
-function gwfc_menu() {
-	
-	add_menu_page 	( 'Fonts Customizer', 'Fonts Customizer', 'edit_theme_options', 'customize.php', NULL, NULL, 61 );
-
-}
-
-add_action( 'admin_menu', 'gwfc_menu' );
-
+*/	
 // 	02. Include Controls, Options Register, Output
 // =============================================================================
 
@@ -50,8 +37,19 @@ require_once( get_template_directory() . '/inc/customizer/google-fonts/controls.
 require_once( get_template_directory() . '/inc/customizer/google-fonts/register.php' );
 require_once( get_template_directory() . '/inc/customizer/google-fonts/output.php' );
 
-require_once( get_template_directory() . '/inc/customizer/google-fonts/gwfc-js.php' );
 
+// 	03. Include JS & CSS
+// =============================================================================
+
+function woof_customizer_js() {
+
+	?>
+
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() . '/inc/customizer/google-fonts/gwfc.js' ?>" ></script>
+	
+	<?php
+}
+add_action( 'customize_controls_print_footer_scripts', 'woof_customizer_js' );
 
 
 // 	04. Enqueue Google Font CSS into head

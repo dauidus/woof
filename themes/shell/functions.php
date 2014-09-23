@@ -10,6 +10,8 @@
 
 /* ::: TWEAK SOME WORDPRESS DEFAULTS ::::::::::::::::::::::::::::::::: */
 
+require get_template_directory() . '/includes/customizer/customizer.php';
+
     // ** For Responsive images and thumbnails, removes the width and height from the markup
     add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
     add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
@@ -182,7 +184,5 @@
 
 // To REMOVE unused dashboard widgets you can uncomment the next line and customize /includes/remove.php
 // require_once('includes/remove.php');
-
-require get_template_directory() . '/includes/customizer/customizer.php';
 
 ?>

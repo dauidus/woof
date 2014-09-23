@@ -31,9 +31,9 @@
 			<article class="credit"><h1>Web Design by <a href="http://www.mimoymima.com" title="web design brooklyn">mimoYmima.com</a></h1></article>
 			<!--END: Credits-->
 			
-			<?php if(  false == get_theme_mod( 'dauid_custom_footer') ) { ?>
+			<?php if(  false == get_theme_mod( 'woof_custom_footer') ) { ?>
 	    		<p class="copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name')?></small></p>
-	    	<?php } else { echo get_theme_mod( 'dauid_custom_footer'); } ?>
+	    	<?php } else { echo get_theme_mod( 'woof_custom_footer'); } ?>
 			
 			<!-- wp_footer hook for Plugins -->
 			<?php wp_footer(); ?>

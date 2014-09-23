@@ -47,9 +47,9 @@
 	<!--SITE HEADER ~ for SEO ~ hidden with CSS-->
 	<header class="site-header" role="banner">
 		
-		<?php if ( get_theme_mod( 'dauid_logo' ) ) : ?>
+		<?php if ( get_theme_mod( 'woof_logo' ) ) : ?>
             <a class="blog-logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' rel='home'>
-            	<img src='<?php echo esc_url( get_theme_mod( 'dauid_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+            	<img src='<?php echo esc_url( get_theme_mod( 'woof_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
             </a>
         <?php endif; ?>
 		
@@ -59,9 +59,9 @@
 		
 		foreach ($social_icons as $key => $value) {
 				
-			if ( false != get_theme_mod( 'dauid_social_' . $key)) { ?>
-                <a class="dauid_social icon icon-<?php echo $key ?>" href="<?php echo esc_url( get_theme_mod( 'dauid_social_' . $key) ); ?>" title="<?php echo $value ?>" target="_blank">
-                    <span class="hidden"><?php _e( $value, 'dauid' ); ?></span>
+			if ( false != get_theme_mod( 'woof_social_' . $key)) { ?>
+                <a class="woof_social icon icon-<?php echo $key ?>" href="<?php echo esc_url( get_theme_mod( 'woof_social_' . $key) ); ?>" title="<?php echo $value ?>" target="_blank">
+                    <span class="hidden"><?php _e( $value, 'woof' ); ?></span>
                 </a>
 			<?php 
 			}
