@@ -41,7 +41,7 @@ function woof_customize_social_register( $wp_customize ) {
 			$wp_customize->add_setting(
 				'woof_social_' . $key, 
 				array(
-					'transport' => 'postMessage', 
+					'transport' => 'refresh', 
 					'sanitize_callback' => 'woof_sanitize_uri'
 				)
 			);
@@ -61,10 +61,10 @@ function woof_customizer_social_head() { ?>
 
    	<style type="text/css">
         <?php if(get_theme_mod( 'woof_icon_color' )){ ?>
-			.top-bar-section a.woof_social { color: <?php echo get_theme_mod( 'woof_icon_color' ); ?>; }
+			header.site-header a.woof_social { color: <?php echo get_theme_mod( 'woof_icon_color' ); ?>; }
 		<?php } ?>
 		<?php if(get_theme_mod( 'woof_icon_hover_color' )){ ?>
-			.top-bar-section a.woof_social:hover { color: <?php echo get_theme_mod( 'woof_icon_hover_color' ); ?>; }
+			header.site-header a.woof_social:hover { color: <?php echo get_theme_mod( 'woof_icon_hover_color' ); ?>; }
 		<?php } ?>
     </style>
     <?php

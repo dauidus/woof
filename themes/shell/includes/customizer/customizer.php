@@ -71,7 +71,7 @@ function woof_customize_register( $wp_customize ) {
 			// Circle logo
 			$wp_customize->add_setting( 'woof_logo_circle', array(
 		        'default'    =>  false,
-		        'transport'  =>  'refresh'
+		        'transport'  =>  'postMessage'
 		    ) );
 				$wp_customize->add_control( 'woof_logo_circle', array(
 			    	'priority'	=> 3,
@@ -82,7 +82,7 @@ function woof_customize_register( $wp_customize ) {
 			// Frame logo
 			$wp_customize->add_setting( 'woof_logo_frame', array(
 		        'default'    =>  false,
-		        'transport'  =>  'refresh'
+		        'transport'  =>  'postMessage'
 		    ) );
 				$wp_customize->add_control( 'woof_logo_frame', array(
 			    	'priority'	=> 4,
@@ -92,14 +92,16 @@ function woof_customize_register( $wp_customize ) {
 			    ) );
 			// Custom footer
 			$wp_customize->add_setting( 'woof_custom_footer' , array( 
-				'sanitize_callback' => 'woof_sanitize_footer' 
+				'sanitize_callback' => 'woof_sanitize_footer',
+				'transport'         =>  'refresh' 
 			));		
 				$wp_customize->add_control(
 				    new woof_textarea_control(
 				        $wp_customize, 'woof_custom_footer', array(
-				            'label' => 'Custom footer - plain text only',
-				            'section' => 'woof_custom',
-				            'settings' => 'woof_custom_footer'
+				            'priority'	=> 5,
+				            'label'     => 'Custom footer - plain text only',
+				            'section'   => 'woof_custom',
+				            'settings'  => 'woof_custom_footer'
 				        )
 				    )
 				);
@@ -138,7 +140,7 @@ function woof_customize_register( $wp_customize ) {
 			// header Menu color
 			$wp_customize->add_setting( 'woof_menu_color' , array(
 			    'default'     => '#50585D',
-			    'transport'   => 'postMessage'
+			    'transport'   => 'refresh'
 			) );
 				$wp_customize->add_control(
 				    new WP_Customize_Color_Control(
@@ -153,7 +155,7 @@ function woof_customize_register( $wp_customize ) {
 			// header Menu hover color
 			$wp_customize->add_setting( 'woof_menu_hover_color' , array(
 			    'default'     => '#50585D',
-			    'transport'   => 'postMessage'
+			    'transport'   => 'refresh'
 			) );
 				$wp_customize->add_control(
 				    new WP_Customize_Color_Control(
@@ -168,7 +170,7 @@ function woof_customize_register( $wp_customize ) {
 			// header Menu active color
 			$wp_customize->add_setting( 'woof_menu_active_color' , array(
 			    'default'     => '#50585D',
-			    'transport'   => 'postMessage'
+			    'transport'   => 'refresh'
 			) );
 				$wp_customize->add_control(
 				    new WP_Customize_Color_Control(
@@ -237,7 +239,7 @@ function woof_customize_register( $wp_customize ) {
 			// Theme link color
 			$wp_customize->add_setting( 'woof_link_norm_color' , array(
 			    'default'     => '#dd3333',
-			    'transport'   => 'postMessage',
+			    'transport'   => 'refresh',
 			) );
 				$wp_customize->add_control(
 				    new WP_Customize_Color_Control(
@@ -274,11 +276,11 @@ function woof_customizer_head() { ?>
    	<style type="text/css">
 
 		<?php if( get_theme_mod( 'woof_link_norm_color' )) { ?>
-			.container a { color: <?php echo get_theme_mod( 'woof_link_norm_color' ); ?>; }
+			.white-section a { color: <?php echo get_theme_mod( 'woof_link_norm_color' ); ?>; }
 		<?php } ?>
 
 		<?php if(get_theme_mod( 'woof_link_hover_color' )) { ?>
-			.container a:hover { color: <?php echo get_theme_mod( 'woof_link_hover_color' ); ?>; }
+			.white-section a:hover { color: <?php echo get_theme_mod( 'woof_link_hover_color' ); ?>; }
 		<?php } ?>
 		
 		
@@ -290,10 +292,10 @@ function woof_customizer_head() { ?>
         	nav.nav-menu a { color: <?php echo get_theme_mod( 'woof_menu_color' ); ?>; }
         <?php } ?>
         <?php if(get_theme_mod( 'woof_menu_hover_color' )){ ?>
-        	nav.nav-menu a:hover { color: <?php echo get_theme_mod( 'woof_menu_hover_color' ); ?>; }
+        	nav.nav-menu a:hover { color: <?php echo get_theme_mod( 'woof_menu_hover_color' ); ?> !important; }
         <?php } ?>
         <?php if(get_theme_mod( 'woof_menu_active_color' )){ ?>
-        	nav.nav-menu li.current-menu-item a { color: <?php echo get_theme_mod( 'woof_menu_active_color' ); ?>; }
+        	nav.nav-menu li.current-menu-item a { color: <?php echo get_theme_mod( 'woof_menu_active_color' ); ?> !important; }
         <?php } ?>
 		<?php if(get_theme_mod( 'woof_header_textcolor' )){ ?>
         	.blog-description { color: <?php echo get_theme_mod( 'woof_header_textcolor' ); ?>;
