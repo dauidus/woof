@@ -56,6 +56,27 @@ function wpq_theme_customizer( $wp_customize ) {
 					) 
 				) 
 			);
+		
+		// Circle logo
+			$wp_customize->add_setting( 'woof_logo_circle', array(
+		        'transport'  =>  'refresh'
+		    ) );
+				$wp_customize->add_control( 'woof_logo_circle', array(
+			    	'priority'	=> 3,
+			        'section'   => 'woof_logo_section',
+			        'label'     => 'Make logo circular',
+			        'type'      => 'checkbox'
+				) );
+			// Frame logo
+			$wp_customize->add_setting( 'woof_logo_frame', array(
+		        'transport'  =>  'refresh'
+		    ) );
+				$wp_customize->add_control( 'woof_logo_frame', array(
+			    	'priority'	=> 4,
+			        'section'   => 'woof_logo_section',
+			        'label'     => 'Frame logo image',
+			        'type'      => 'checkbox'
+			    ) );
 	
 }
 
@@ -85,6 +106,22 @@ function wpq_customize_styles()
     .wp-full-overlay {
         z-index: 150000 !important;
     }
+    
+    <?php if( false != get_theme_mod( 'woof_logo_circle' ) ) { ?>
+		.blog-logo {
+			-webkit-border-radius: 50%;
+		    -moz-border-radius: 50%;
+		    border-radius: 50%;
+		}
+    <?php } ?>
+    <?php if( false != get_theme_mod( 'woof_logo_frame' ) ) { ?>
+		.blog-logo {
+		    border: 3px solid white;
+		    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+		    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+		    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+		}
+    <?php } ?>
     </style>
 <?php }
 

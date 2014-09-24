@@ -68,28 +68,7 @@ function woof_customize_register( $wp_customize ) {
 	        'priority'  => 18
 	    ) );
 	    
-			// Circle logo
-			$wp_customize->add_setting( 'woof_logo_circle', array(
-		        'default'    =>  false,
-		        'transport'  =>  'postMessage'
-		    ) );
-				$wp_customize->add_control( 'woof_logo_circle', array(
-			    	'priority'	=> 3,
-			        'section'   => 'woof_custom',
-			        'label'     => 'Make logo circular',
-			        'type'      => 'checkbox'
-				) );
-			// Frame logo
-			$wp_customize->add_setting( 'woof_logo_frame', array(
-		        'default'    =>  false,
-		        'transport'  =>  'postMessage'
-		    ) );
-				$wp_customize->add_control( 'woof_logo_frame', array(
-			    	'priority'	=> 4,
-			        'section'   => 'woof_custom',
-			        'label'     => 'Frame logo image',
-			        'type'      => 'checkbox'
-			    ) );
+			
 			// Custom footer
 			$wp_customize->add_setting( 'woof_custom_footer' , array( 
 				'sanitize_callback' => 'woof_sanitize_footer',
@@ -303,21 +282,7 @@ function woof_customizer_head() { ?>
 		
 		
 
-        <?php if( false != get_theme_mod( 'woof_logo_circle' ) ) { ?>
-			.blog-logo {
-				-webkit-border-radius: 50%;
-			    -moz-border-radius: 50%;
-			    border-radius: 50%;
-			}
-        <?php } ?>
-        <?php if( false != get_theme_mod( 'woof_logo_frame' ) ) { ?>
-			.blog-logo {
-			    border: 3px solid white;
-			    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-			    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-			    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-			}
-        <?php } ?>
+        
        
     </style>
     <?php
