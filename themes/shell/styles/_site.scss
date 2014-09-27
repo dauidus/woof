@@ -72,6 +72,40 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 		}
 	}
 
+	.nav-menu li ul.sub-menu,
+      .nav-menu li ul.children {
+        margin-top: 0;
+        border: 1px solid #ccc;
+        border-top: 0;
+        position: absolute;
+        visibility: hidden;
+        z-index: 8999;
+        /* highlight sub-menu current page */ }
+        .nav-menu li ul.sub-menu li,
+        .nav-menu li ul.children li {
+          /*
+          if you need to go deeper, go nuts
+          just remember deeper menus suck
+          for usability. k, bai.
+          */ }
+          .nav-menu li ul.sub-menu li a,
+          .nav-menu li ul.children li a {
+            padding-left: 10px;
+            border-right: 0;
+            display: block;
+            width: 180px;
+            border-bottom: 1px solid #ccc; }
+          .nav-menu li ul.sub-menu li:last-child a,
+          .nav-menu li ul.children li:last-child a {
+            border-bottom: 0; }
+          .nav-menu li ul.sub-menu li ul,
+          .nav-menu li ul.children li ul {
+            top: 0;
+            left: 100%; }
+      .nav-menu li:hover > ul {
+        top: auto;
+        visibility: visible; }
+
 
 
 /* ::: COMMENTS ::::::::::::::::::::::::::::::::: */
