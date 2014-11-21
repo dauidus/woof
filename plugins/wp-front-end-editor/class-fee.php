@@ -1,7 +1,7 @@
 <?php
 
 class FEE {
-	const VERSION = '1.0.0-beta1';
+	const VERSION = '1.0.0-beta1.1';
 	const MIN_VERSION = '4.0-RC';
 	const MAX_VERSION = '4.1-beta';
 
@@ -108,7 +108,9 @@ class FEE {
 	function ajax_slug() {
 		check_ajax_referer( 'slug-nonce_' . $_POST['post_ID'], '_wpnonce' );
 
-		wp_send_json_success( get_sample_permalink( $_POST['post_ID'], $_POST['post_title'], $_POST['post_name'] )[1] );
+		$sample = get_sample_permalink( $_POST['post_ID'], $_POST['post_title'], $_POST['post_name'] );
+
+		wp_send_json_success( $sample[1] );
 	}
 
 	function ajax_shortcode() {
@@ -148,7 +150,8 @@ class FEE {
 
 		setup_postdata( $post );
 
-		$orignal_categories = $this->get_post_tax_and_terms()['category'];
+		$orignal_categories = $this->get_post_tax_and_terms();
+		$orignal_categories = $orignal_categories['category'];
 		wp_set_post_categories( $_POST['post_ID'], isset( $_POST['post_category'] ) ? $_POST['post_category'] : array() );
 		$list = get_the_category_list( urldecode( $_POST['separator'] ), urldecode( $_POST['parents'] ) );
 		wp_set_post_categories( $_POST['post_ID'], $orignal_categories );
@@ -170,7 +173,7 @@ class FEE {
 			isset( $_SERVER['HTTP_ACCEPT_ENCODING'] ) &&
 			false !== stripos( $_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip' );
 
-		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) || file_exists( dirname( __FILE__ ) . '/.git' ) ? '' : '.min';
+		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) || file_exists( dirname( __FILE__ ) . '/.gitignore' ) ? '' : '.min';
 
 		if ( $this->has_fee() ) {
 			wp_enqueue_style( 'wp-core-ui' , $this->url( '/css/wp-core-ui.css' ), false, self::VERSION, 'screen' );
@@ -627,7 +630,7 @@ class FEE {
 						$visibility = 'password';
 					} elseif ( $post_type == 'post' && is_sticky( $post->ID ) ) {
 						$visibility = 'sticky';
-						$visibility_trans = __('Public, Sticky');
+						$visibility_trans = __( 'Public, Sticky' );
 					} else {
 						$visibility = 'public';
 					}
@@ -722,33 +725,33 @@ class FEE {
 
 		$messages['post'] = array(
 			 0 => '', // Unused. Messages start at index 1.
-			 1 => __('Post updated.'),
-			 2 => __('Custom field updated.'),
-			 3 => __('Custom field deleted.'),
-			 4 => __('Post updated.'),
+			 1 => __( 'Post updated.' ),
+			 2 => __( 'Custom field updated.' ),
+			 3 => __( 'Custom field deleted.' ),
+			 4 => __( 'Post updated.' ),
 			/* translators: %s: date and time of the revision */
-			 5 => isset( $revision_id ) ? sprintf( __('Post restored to revision from %s'), wp_post_revision_title( (int) $revision_id, false ) ) : false,
-			 6 => __('Post published.'),
-			 7 => __('Post saved.'),
-			 8 => __('Post submitted.'),
-			 9 => sprintf( __('Post scheduled for: <strong>%1$s</strong>.'),
+			 5 => isset( $revision_id ) ? sprintf( __( 'Post restored to revision from %s' ), wp_post_revision_title( (int) $revision_id, false ) ) : false,
+			 6 => __( 'Post published.' ),
+			 7 => __( 'Post saved.' ),
+			 8 => __( 'Post submitted.' ),
+			 9 => sprintf( __( 'Post scheduled for: <strong>%1$s</strong>.' ),
 				// translators: Publish box date format, see http://php.net/date
 				date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ) ),
-			10 => __('Post draft updated.')
+			10 => __( 'Post draft updated.' )
 		);
 
 		$messages['page'] = array(
 			 0 => '', // Unused. Messages start at index 1.
-			 1 => __('Page updated.'),
-			 2 => __('Custom field updated.'),
-			 3 => __('Custom field deleted.'),
-			 4 => __('Page updated.'),
-			 5 => isset( $revision_id ) ? sprintf( __('Page restored to revision from %s'), wp_post_revision_title( (int) $revision_id, false ) ) : false,
-			 6 => __('Page published.'),
-			 7 => __('Page saved.'),
-			 8 => __('Page submitted.' ),
-			 9 => sprintf( __('Page scheduled for: <strong>%1$s</strong>.'), date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ) ),
-			10 => __('Page draft updated.')
+			 1 => __( 'Page updated.' ),
+			 2 => __( 'Custom field updated.' ),
+			 3 => __( 'Custom field deleted.' ),
+			 4 => __( 'Page updated.' ),
+			 5 => isset( $revision_id ) ? sprintf( __( 'Page restored to revision from %s' ), wp_post_revision_title( (int) $revision_id, false ) ) : false,
+			 6 => __( 'Page published.' ),
+			 7 => __( 'Page saved.' ),
+			 8 => __( 'Page submitted.' ),
+			 9 => sprintf( __( 'Page scheduled for: <strong>%1$s</strong>.' ), date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ) ),
+			10 => __( 'Page draft updated.' )
 		);
 
 		$messages['attachment'] = array_fill( 1, 10, __( 'Media attachment updated.' ) ); // Hack, for now.
@@ -920,6 +923,8 @@ class FEE {
 		$_post = get_post( $post );
 		$_post->post_status = 'published';
 
-		return get_sample_permalink( $_post )[0];
+		$sample = get_sample_permalink( $_post );
+
+		return $sample[0];
 	}
 }
